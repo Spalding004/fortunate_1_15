@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.misterspalding.fortunate_1_15;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
