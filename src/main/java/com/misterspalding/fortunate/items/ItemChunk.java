@@ -1,4 +1,4 @@
-package com.misterspalding.fortunate_1_15.items;
+package com.misterspalding.fortunate.items;
 
 import net.minecraft.item.Item;
 

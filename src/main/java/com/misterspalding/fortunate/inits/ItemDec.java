@@ -1,7 +1,7 @@
-package com.misterspalding.fortunate_1_15.inits;
+package com.misterspalding.fortunate.inits;
 
-import com.misterspalding.fortunate_1_15.Main;
-import com.misterspalding.fortunate_1_15.items.ItemChunk;
+import com.misterspalding.fortunate.Main;
+import com.misterspalding.fortunate.items.ItemChunk;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;

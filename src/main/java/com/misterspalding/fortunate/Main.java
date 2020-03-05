@@ -1,4 +1,4 @@
-package com.misterspalding.fortunate_1_15;
+package com.misterspalding.fortunate;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -19,13 +19,13 @@ import org.apache.logging.log4j.Logger;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("fortunate_1_15")
+@Mod("fortunate")
 public class Main
 {
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
     
-    public static final String MOD_ID = "fortunate_1_15";
+    public static final String MOD_ID = "fortunate";
     public static Main instance;
 
     public Main() {
