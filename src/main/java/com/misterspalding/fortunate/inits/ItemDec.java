@@ -11,9 +11,11 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 
 @Mod.EventBusSubscriber(modid=Main.MOD_ID, bus = Bus.MOD)
+@ObjectHolder(Main.MOD_ID)
 public class ItemDec {
 
-	public static ItemChunk iron_chunk;
+	@ObjectHolder("fortunate:iron_chunk")
+	public static ItemChunk iron_chunk = null;
 	
 	
 	@SubscribeEvent

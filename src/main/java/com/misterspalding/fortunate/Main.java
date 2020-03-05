@@ -75,21 +75,6 @@ public class Main
        
     }
     
-    public static class ModItemGroup extends ItemGroup {
-    	
-   	public static final ModItemGroup MOD_ITEM_GROUP = new ModItemGroup(ItemGroup.GROUPS.length, "fortunate");
-   	private ModItemGroup(int index, String label) {
-   		super(index, label);
-    		    		
-   	}
-    	
-   	@Override
-   	@OnlyIn(Dist.CLIENT)
-   	public ItemStack createIcon() {
-    	return new ItemStack(ItemDec.iron_chunk);
-    	}
-   	
-    	
-    }
+    
    
 }
