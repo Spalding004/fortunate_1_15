@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+ 
+    "#forge:ores/gold",
+    "#forge:ores/iron"
+   
+  ]
+}

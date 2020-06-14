@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "fortunate:item/gold_chunk"
+  }
+}

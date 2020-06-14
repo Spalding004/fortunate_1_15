@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "fortunate:gold_chunk"
+  },
+  "result": "minecraft:gold_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}

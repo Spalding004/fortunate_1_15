@@ -1,6 +1,6 @@
 package com.misterspalding.fortunate.items;
 
-import com.misterspalding.fortunate.itemgroups.ModItemGroup;
+import com.misterspalding.fortunate.HowFortunate.ModItemGroup;
 
 import net.minecraft.item.Item;
 
@@ -8,14 +8,13 @@ public class ItemChunk extends Item {
 
 		
 	
-		public ItemChunk(String name) {
+		public ItemChunk() {
 		      super(new Item.Properties()
 		    		 
-		    		  .group(ModItemGroup.MOD_ITEM_GROUP)
+		    		  .group(ModItemGroup.instance)
 		    		  
 		    		  );
-		      this.setRegistryName(name);
-		      
+		   
 		      
 			
 			

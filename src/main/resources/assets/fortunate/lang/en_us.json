@@ -1,5 +1,6 @@
 {
-    "item.fortunate.iron_chunk": "Iron Chunk",
+    "item.fortunate.iron_chunk": "Iron Ore Chunk",
+    "item.fortunate.gold_chunk": "Gold Ore Chunk",
   
-    "itemGroup.fortunate": "How Fortunate!"
+    "itemGroup.mod_creative_tab": "How Fortunate!"
 }

@@ -1,0 +1,10 @@
+{
+  "type": "fortunate:fortunate_gold",
+  "conditions": [
+ 	 {
+      "condition": "block_state_property",
+      "block":"minecraft:gold_ore"
+    }
+  ]
+
+}
