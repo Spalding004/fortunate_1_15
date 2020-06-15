@@ -1,0 +1,68 @@
+package com.misterspalding.fortunate.lists;
+
+import java.awt.Color;
+
+import net.minecraft.item.ItemStack;
+
+public class ColorList {
+
+	 public static int ironColor = (new Color(215, 182, 161)).getRGB();
+	   public static int goldColor = (new Color(247, 214, 61)).getRGB();
+	   public static int copperColor = (new Color(252, 136, 90)).getRGB();
+	   public static int arditeColor = (new Color(215, 177, 0)).getRGB();
+	   public static int cobaltColor;
+	   public static int tinColor;
+	   public static int silverColor;
+	   public static int leadColor;
+	   public static int nickelColor;
+	   public static int aluminumColor;
+	   public static int platinumColor;
+	   public static int osmiumColor;
+	   public static int manganeseColor;
+	   public static int cinnabarColor;
+	   public static int iridiumColor;
+	   public static int uraniumColor;
+	   public static int siliconColor;
+	   public static int magnesiumColor;
+	   public static int lithiumColor;
+	   public static int thoriumColor;
+	   public static int boronColor;
+	   public static int yelloriteColor;
+	   public static int zincColor;
+
+	   static {
+	      cobaltColor = Color.BLUE.getRGB();
+	      tinColor = Color.WHITE.getRGB();
+	      silverColor = (new Color(199, 215, 221)).getRGB();
+	      leadColor = (new Color(152, 185, 222)).getRGB();
+	      nickelColor = (new Color(202, 201, 171)).getRGB();
+	      aluminumColor = (new Color(177, 177, 182)).getRGB();
+	      platinumColor = (new Color(67, 190, 232)).getRGB();
+	      osmiumColor = (new Color(141, 175, 186)).getRGB();
+	      manganeseColor = (new Color(240, 188, 188)).getRGB();
+	      cinnabarColor = (new Color(94, 12, 12)).getRGB();
+	      iridiumColor = (new Color(182, 201, 232)).getRGB();
+	      uraniumColor = (new Color(58, 242, 94)).getRGB();
+	      siliconColor = (new Color(147, 81, 81)).getRGB();
+	      magnesiumColor = (new Color(224, 190, 214)).getRGB();
+	      lithiumColor = (new Color(219, 219, 219)).getRGB();
+	      thoriumColor = (new Color(0, 0, 0)).getRGB();
+	      boronColor = (new Color(109, 109, 109)).getRGB();
+	      yelloriteColor = (new Color(204, 255, 0)).getRGB();
+	      zincColor = (new Color(237, 220, 220)).getRGB();
+	   }
+
+	public static int getColor(ItemStack stack) {
+		int returnColor = Color.WHITE.getRGB();
+		
+		if (stack.getItem().getRegistryName().toString().contains("copper")) {
+				
+				returnColor = ColorList.copperColor;
+				
+		}
+		
+		
+		return returnColor;
+	}
+	
+}

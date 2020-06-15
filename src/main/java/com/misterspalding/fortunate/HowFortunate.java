@@ -7,6 +7,11 @@ import org.apache.logging.log4j.Logger;
 
 import com.misterspalding.fortunate.events.loot_modifiers.MetalFortuneModifier;
 import com.misterspalding.fortunate.inits.ItemDec;
+import com.misterspalding.fortunate.items.ItemChunkColored;
+import com.misterspalding.fortunate.items.ItemIngotColored;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -60,7 +65,19 @@ public class HowFortunate
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+        int lengthChunk = ItemDec.colorItems.size();
+        for (int x = 0; x < lengthChunk; x++) {
+        	
+        	Minecraft.getInstance().getItemColors().register(new ItemChunkColored.ColorHandler(),  new Item[] {(Item)ItemDec.colorItems.get(x)});
+        	
+        }
         
+        int lengthIngot = ItemDec.colorIngots.size();
+        for (int x = 0; x < lengthIngot; x++) {
+        	
+        	Minecraft.getInstance().getItemColors().register(new ItemIngotColored.ColorHandler(),  new Item[] {(Item)ItemDec.colorIngots.get(x)});
+        	
+        }
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

@@ -1,6 +1,9 @@
 {
     "item.fortunate.iron_chunk": "Iron Ore Chunk",
     "item.fortunate.gold_chunk": "Gold Ore Chunk",
+    "item.fortunate.copper_chunk": "Copper Ore Chunk",
+    
+    "item.fortunate.copper_ingot": "Copper Ingot",
   
     "itemGroup.mod_creative_tab": "How Fortunate!"
 }

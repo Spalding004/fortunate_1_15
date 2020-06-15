@@ -14,29 +14,27 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class ItemChunkColored extends Item {
+public class ItemIngotColored extends Item {
 
 	
 	
-		public ItemChunkColored() {
+		public ItemIngotColored() {
 		      super(new Item.Properties()
 		    		  .group(ModItemGroup.instance)
 		    		  );
 		      
-		      ItemDec.colorItems.add(this);
+		      ItemDec.colorIngots.add(this);
 		      
 	}
 	
 	
 		public static class ColorHandler implements IItemColor {
 		      public int getColor(ItemStack stack, int tintIndex) {
-		    	  int color = Color.WHITE.getRGB();
-			 		
-			 		if (tintIndex == 1) color = ColorList.getColor(stack);
-			 		
-			 		return color;
+		 		int color = Color.WHITE.getRGB();
 		 		
+		 		if (tintIndex == 0) color = ColorList.getColor(stack);
 		 		
+		 		return color;
 		   }
 
 			

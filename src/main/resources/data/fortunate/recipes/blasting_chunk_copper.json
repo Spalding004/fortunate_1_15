@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "fortunate:iron_chunk"
+    "item": "fortunate:copper_chunk"
   },
-  "result": "minecraft:iron_ingot",
+  "result": "fortunate:copper_ingot",
   "experience": 0.7,
   "cookingtime": 100
 }
