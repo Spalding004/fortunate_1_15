@@ -13,6 +13,7 @@ public class ItemDec {
 	
 	public static final RegistryObject<Item> IRON_CHUNK = ITEMS.register("iron_chunk", () -> new ItemChunk());
 	public static final RegistryObject<Item> GOLD_CHUNK = ITEMS.register("gold_chunk", () -> new ItemChunk());
+	public static final RegistryObject<Item> COPPER_CHUNK = ITEMS.register("copper_chunk", () -> new ItemChunk());
 	
 	
 }

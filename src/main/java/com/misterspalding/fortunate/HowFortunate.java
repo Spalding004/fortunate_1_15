@@ -5,8 +5,7 @@ import javax.annotation.Nonnull;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.misterspalding.fortunate.events.loot_modifiers.GoldFortuneModifier;
-import com.misterspalding.fortunate.events.loot_modifiers.IronFortuneModifier;
+import com.misterspalding.fortunate.events.loot_modifiers.MetalFortuneModifier;
 import com.misterspalding.fortunate.inits.ItemDec;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -31,7 +30,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class HowFortunate
 {
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    @SuppressWarnings("unused")
+	private static final Logger LOGGER = LogManager.getLogger();
     
     public static final String MOD_ID = "fortunate";
     public static HowFortunate instance;
@@ -86,8 +86,7 @@ public class HowFortunate
     @SubscribeEvent
     public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {
         
-            event.getRegistry().register(new IronFortuneModifier.Serializer().setRegistryName(new ResourceLocation(HowFortunate.MOD_ID,"fortunate_iron")));
-            event.getRegistry().register(new GoldFortuneModifier.Serializer().setRegistryName(new ResourceLocation(HowFortunate.MOD_ID,"fortunate_gold")));
+            event.getRegistry().register(new MetalFortuneModifier.Serializer().setRegistryName(new ResourceLocation(HowFortunate.MOD_ID,"fortunate_metals")));
             
     }
     
