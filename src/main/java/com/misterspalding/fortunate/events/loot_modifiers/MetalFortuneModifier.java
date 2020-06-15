@@ -30,6 +30,7 @@ public class MetalFortuneModifier extends LootModifier {
     public List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
     	Random random = new Random();
     	String broken = generatedLoot.toString();
+    	
     	if (generatedLoot.size() == 0) {
     		
     		return generatedLoot;
@@ -44,7 +45,8 @@ public class MetalFortuneModifier extends LootModifier {
     	ItemStack ctxTool = context.get(LootParameters.TOOL);
     	int enchant_level =  EnchantmentHelper.getEnchantmentLevel(Enchantments.FORTUNE, ctxTool);
     	ArrayList<ItemStack> stack_ret = new ArrayList<ItemStack>();
-    	stack_ret.add(new ItemStack(ret.get(0).getItem(),  1 + random.nextInt(1+enchant_level)));
+    	int base_count = generatedLoot.size();
+    	stack_ret.add(new ItemStack(ret.get(0).getItem(),  base_count + random.nextInt(1+enchant_level)));
     	return stack_ret;
     		}
     }
