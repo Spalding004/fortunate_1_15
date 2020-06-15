@@ -61,6 +61,36 @@ public class ColorList {
 				
 		}
 		
+		if (stack.getItem().getRegistryName().toString().contains("tin")) {
+			
+			returnColor = ColorList.tinColor;
+			
+		}
+		
+		if (stack.getItem().getRegistryName().toString().contains("silver")) {
+			
+			returnColor = ColorList.silverColor;
+			
+		}
+		
+		if (stack.getItem().getRegistryName().toString().contains("lead")) {
+			
+			returnColor = ColorList.leadColor;
+			
+		}
+		
+		if (stack.getItem().getRegistryName().toString().contains("nickel")) {
+			
+			returnColor = ColorList.nickelColor;
+			
+		}
+		
+		if (stack.getItem().getRegistryName().toString().contains("platinum")) {
+			
+			returnColor = ColorList.platinumColor;
+			
+		}
+		
 		
 		return returnColor;
 	}

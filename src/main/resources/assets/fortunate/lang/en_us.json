@@ -1,9 +1,30 @@
 {
     "item.fortunate.iron_chunk": "Iron Ore Chunk",
     "item.fortunate.gold_chunk": "Gold Ore Chunk",
+    
     "item.fortunate.copper_chunk": "Copper Ore Chunk",
     
     "item.fortunate.copper_ingot": "Copper Ingot",
+    
+    "item.fortunate.tin_chunk": "Tin Ore Chunk",
+    
+    "item.fortunate.tin_ingot": "Tin Ingot",
+    
+    "item.fortunate.platinum_chunk": "Platinum Ore Chunk",
+    
+    "item.fortunate.platinum_ingot": "Platinum Ingot",
+    
+    "item.fortunate.silver_chunk": "Silver Ore Chunk",
+    
+    "item.fortunate.silver_ingot": "Silver Ingot",
+    
+    "item.fortunate.nickel_chunk": "Nickel Ore Chunk",
+    
+    "item.fortunate.nickel_ingot": "Nickel Ingot",
+    
+    "item.fortunate.lead_chunk": "Lead Ore Chunk",
+    
+    "item.fortunate.lead_ingot": "Lead Ingot",
   
     "itemGroup.mod_creative_tab": "How Fortunate!"
 }

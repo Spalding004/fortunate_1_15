@@ -49,6 +49,17 @@ public class MetalFortuneModifier extends LootModifier {
     		}
     }
 
+    /*
+     * 
+     * 
+     * I have no doubt that this is NOT a recommended way to use the global loot modifier system.
+     * 
+     * If Draco18s saw this I'm sure he'd have very strong words.
+     * 
+     * Do as I say, not as I do. 
+     * 
+     * 
+     */
    
 
     private ArrayList<ItemStack> checkloots(List<ItemStack> generatedLoot, String broken) {
@@ -72,6 +83,41 @@ public class MetalFortuneModifier extends LootModifier {
     	checkedOre = "gold";
     	if (broken.contains(checkedOre+"_ore") || broken.contains("ore_" + checkedOre)) {
     		toReturn = ItemDec.GOLD_CHUNK.get();
+    		listReturn.add(new ItemStack(toReturn));
+    		return listReturn;
+    	}
+    	
+    	checkedOre = "lead";
+    	if (broken.contains(checkedOre+"_ore") || broken.contains("ore_" + checkedOre)) {
+    		toReturn = ItemDec.LEAD_CHUNK.get();
+    		listReturn.add(new ItemStack(toReturn));
+    		return listReturn;
+    	}
+    	
+    	checkedOre = "silver";
+    	if (broken.contains(checkedOre+"_ore") || broken.contains("ore_" + checkedOre)) {
+    		toReturn = ItemDec.SILVER_CHUNK.get();
+    		listReturn.add(new ItemStack(toReturn));
+    		return listReturn;
+    	}
+    	
+    	checkedOre = "platinum";
+    	if (broken.contains(checkedOre+"_ore") || broken.contains("ore_" + checkedOre)) {
+    		toReturn = ItemDec.PLATINUM_CHUNK.get();
+    		listReturn.add(new ItemStack(toReturn));
+    		return listReturn;
+    	}
+    	
+    	checkedOre = "nickel";
+    	if (broken.contains(checkedOre+"_ore") || broken.contains("ore_" + checkedOre)) {
+    		toReturn = ItemDec.NICKEL_CHUNK.get();
+    		listReturn.add(new ItemStack(toReturn));
+    		return listReturn;
+    	}
+    	
+    	checkedOre = "tin";
+    	if (broken.contains(checkedOre+"_ore") || broken.contains("ore_" + checkedOre)) {
+    		toReturn = ItemDec.TIN_CHUNK.get();
     		listReturn.add(new ItemStack(toReturn));
     		return listReturn;
     	}
