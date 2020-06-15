@@ -39,4 +39,11 @@ public class ItemDec {
 	
 	public static final RegistryObject<Item> PLATINUM_CHUNK = ITEMS.register("platinum_chunk", () -> new ItemChunkColored());
 	public static final RegistryObject<Item> PLATINUM_INGOT = ITEMS.register("platinum_ingot", () -> new ItemIngotColored());
+	
+
+	public static final RegistryObject<Item> OSMIUM_CHUNK = ITEMS.register("osmium_chunk", () -> new ItemChunkColored());
+	public static final RegistryObject<Item> OSMIUM_INGOT = ITEMS.register("osmium_ingot", () -> new ItemIngotColored());
+	
+	public static final RegistryObject<Item> COBALT_CHUNK = ITEMS.register("cobalt_chunk", () -> new ItemChunkColored());
+	public static final RegistryObject<Item> COBALT_INGOT = ITEMS.register("cobalt_ingot", () -> new ItemIngotColored());
 }

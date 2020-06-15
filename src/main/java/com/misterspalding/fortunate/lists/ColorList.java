@@ -91,6 +91,18 @@ public class ColorList {
 			
 		}
 		
+		if (stack.getItem().getRegistryName().toString().contains("cobalt")) {
+			
+			returnColor = ColorList.cobaltColor;
+			
+		}
+		
+		if (stack.getItem().getRegistryName().toString().contains("osmium")) {
+			
+			returnColor = ColorList.osmiumColor;
+			
+		}
+		
 		
 		return returnColor;
 	}
