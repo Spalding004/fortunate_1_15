@@ -26,7 +26,6 @@
     
     "item.fortunate.lead_ingot": "Lead Ingot",
     
-        
     "item.fortunate.cobalt_chunk": "Cobalt Ore Chunk",
     
     "item.fortunate.cobalt_ingot": "Cobalt Ingot",
@@ -34,6 +33,14 @@
     "item.fortunate.osmium_chunk": "Osmium Ore Chunk",
     
     "item.fortunate.osmium_ingot": "Osmium Ingot",
+    
+    "item.fortunate.aluminum_chunk": "Aluminum Ore Chunk",
+    
+    "item.fortunate.aluminum_ingot": "Aluminum Ingot",
+    
+    "item.fortunate.zinc_chunk": "Zinc Ore Chunk",
+    
+    "item.fortunate.zinc_ingot": "Zinc Ingot",
   
     "itemGroup.mod_creative_tab": "How Fortunate!"
 }

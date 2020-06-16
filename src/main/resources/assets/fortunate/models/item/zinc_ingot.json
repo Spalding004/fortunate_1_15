@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fortunate:item/ingot_base",
+    "layer1": "fortunate:item/ingot_gleam"
+  }
+}

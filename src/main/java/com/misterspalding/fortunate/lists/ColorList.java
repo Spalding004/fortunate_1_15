@@ -31,7 +31,7 @@ public class ColorList {
 	   public static int zincColor;
 
 	   static {
-	      cobaltColor = Color.BLUE.getRGB();
+	      cobaltColor = (new Color(78, 109, 212)).getRGB();
 	      tinColor = Color.WHITE.getRGB();
 	      silverColor = (new Color(199, 215, 221)).getRGB();
 	      leadColor = (new Color(152, 185, 222)).getRGB();
@@ -102,6 +102,21 @@ public class ColorList {
 			returnColor = ColorList.osmiumColor;
 			
 		}
+		
+		if (stack.getItem().getRegistryName().toString().contains("zinc")) {
+			
+			returnColor = ColorList.zincColor;
+			
+		}
+		
+		if (stack.getItem().getRegistryName().toString().contains("aluminum")) {
+			
+			returnColor = ColorList.aluminumColor;
+			
+		}
+		
+		
+		
 		
 		
 		return returnColor;
