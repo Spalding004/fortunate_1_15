@@ -126,14 +126,14 @@ public class MetalFortuneModifier extends LootModifier {
     	
     	checkedOre = "cobalt";
     	if (broken.contains(checkedOre+"_ore") || broken.contains("ore_" + checkedOre)) {
-    		toReturn = ItemDec.TIN_CHUNK.get();
+    		toReturn = ItemDec.COBALT_CHUNK.get();
     		listReturn.add(new ItemStack(toReturn));
     		return listReturn;
     	}
     	
     	checkedOre = "osmium";
     	if (broken.contains(checkedOre+"_ore") || broken.contains("ore_" + checkedOre)) {
-    		toReturn = ItemDec.TIN_CHUNK.get();
+    		toReturn = ItemDec.OSMIUM_CHUNK.get();
     		listReturn.add(new ItemStack(toReturn));
     		return listReturn;
     	}
