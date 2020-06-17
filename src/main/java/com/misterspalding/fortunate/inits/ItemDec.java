@@ -51,4 +51,7 @@ public class ItemDec {
 	
 	public static final RegistryObject<Item> ALUMINUM_CHUNK = ITEMS.register("aluminum_chunk", () -> new ItemChunkColored());
 	public static final RegistryObject<Item> ALUMINUM_INGOT = ITEMS.register("aluminum_ingot", () -> new ItemIngotColored());
+	
+	public static final RegistryObject<Item> URANIUM_CHUNK = ITEMS.register("uranium_chunk", () -> new ItemChunkColored());
+	public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot", () -> new ItemIngotColored());
 }

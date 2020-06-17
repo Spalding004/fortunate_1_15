@@ -115,6 +115,12 @@ public class ColorList {
 			
 		}
 		
+		if (stack.getItem().getRegistryName().toString().contains("uranium")) {
+			
+			returnColor = ColorList.uraniumColor;
+			
+		}
+		
 		
 		
 		

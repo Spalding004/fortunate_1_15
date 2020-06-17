@@ -41,6 +41,10 @@
     "item.fortunate.zinc_chunk": "Zinc Ore Chunk",
     
     "item.fortunate.zinc_ingot": "Zinc Ingot",
+    
+    "item.fortunate.uranium_chunk": "Uranium Ore Chunk",
+    
+    "item.fortunate.uranium_ingot": "Uranium Ingot",
   
     "itemGroup.mod_creative_tab": "How Fortunate!"
 }

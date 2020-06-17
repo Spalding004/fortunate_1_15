@@ -30,19 +30,19 @@ public class MetalFortuneModifier extends LootModifier {
     public List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
     	Random random = new Random();
     	String broken = generatedLoot.toString();
-    	
+    	ItemStack ctxTool = context.get(LootParameters.TOOL);
     	if (generatedLoot.size() == 0) {
     		
     		return generatedLoot;
     		
     	}
     	ArrayList<ItemStack> ret = checkloots(generatedLoot, broken);
-    		if (generatedLoot.get(0).getItem() == ret.get(0).getItem()) {
+    		if (generatedLoot.get(0).getItem() == ret.get(0).getItem() || EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, ctxTool) != 0) {
     			
     			return generatedLoot;
     			
     		} else {
-    	ItemStack ctxTool = context.get(LootParameters.TOOL);
+    	
     	int enchant_level =  EnchantmentHelper.getEnchantmentLevel(Enchantments.FORTUNE, ctxTool);
     	ArrayList<ItemStack> stack_ret = new ArrayList<ItemStack>();
     	int base_count = generatedLoot.size();
