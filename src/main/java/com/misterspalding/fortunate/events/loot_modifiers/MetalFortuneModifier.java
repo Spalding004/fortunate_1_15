@@ -76,7 +76,8 @@ public class MetalFortuneModifier extends LootModifier {
     	}
     	
     	checkedOre = "iron";
-    	if (broken.contains(checkedOre+"_ore") || broken.contains("ore_" + checkedOre)) {
+    	if ((broken.contains(checkedOre+"_ore") || broken.contains("ore_" + checkedOre)) && !broken.contains("crimson") ) {
+    		//compatability fix for Silent Gear
     		toReturn = ItemDec.IRON_CHUNK.get();
     		listReturn.add(new ItemStack(toReturn));
     		return listReturn;
