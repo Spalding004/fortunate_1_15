@@ -153,6 +153,13 @@ public class MetalFortuneModifier extends LootModifier {
     		return listReturn;
     	}
     	
+    	checkedOre = "uranium";
+    	if (broken.contains(checkedOre+"_ore") || broken.contains("ore_" + checkedOre)) {
+    		toReturn = ItemDec.URANIUM_CHUNK.get();
+    		listReturn.add(new ItemStack(toReturn));
+    		return listReturn;
+    	}
+    	
     	return (ArrayList<ItemStack>) generatedLoot;
     	
 		
