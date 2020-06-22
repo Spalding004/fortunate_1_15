@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.misterspalding.fortunate.HowFortunate;
 import com.misterspalding.fortunate.items.ItemChunk;
 import com.misterspalding.fortunate.items.ItemChunkColored;
+import com.misterspalding.fortunate.items.ItemChunkSpecial;
 import com.misterspalding.fortunate.items.ItemIngotColored;
 
 import net.minecraft.item.Item;
@@ -54,4 +55,9 @@ public class ItemDec {
 	
 	public static final RegistryObject<Item> URANIUM_CHUNK = ITEMS.register("uranium_chunk", () -> new ItemChunkColored());
 	public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot", () -> new ItemIngotColored());
+	
+	public static final RegistryObject<Item> BAUXITE_CHUNK = ITEMS.register("bauxite_chunk", () -> new ItemChunkColored());
+
+	public static final RegistryObject<Item> BISMUTH_CHUNK = ITEMS.register("bismuth_chunk", () -> new ItemChunkSpecial());
+	public static final RegistryObject<Item> BISMUTH_INGOT = ITEMS.register("bismuth_ingot", () -> new ItemIngotColored());
 }

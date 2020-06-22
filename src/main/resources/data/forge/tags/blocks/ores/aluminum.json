@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "fortunate:aluminum_chunk"
+    "fortunate:aluminum_chunk",
+    
+    "fortunate:bauxite_chunk"
   ]
 }

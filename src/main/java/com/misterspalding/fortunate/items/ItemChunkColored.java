@@ -16,29 +16,23 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ItemChunkColored extends Item {
 
-	
-	
-		public ItemChunkColored() {
-		      super(new Item.Properties()
-		    		  .group(ModItemGroup.instance)
-		    		  );
-		      
-		      ItemDec.colorItems.add(this);
-		      
-	}
-	
-	
-		public static class ColorHandler implements IItemColor {
-		      public int getColor(ItemStack stack, int tintIndex) {
-		    	  int color = Color.WHITE.getRGB();
-			 		
-			 		if (tintIndex == 1) color = ColorList.getColor(stack);
-			 		
-			 		return color;
-		 		
-		 		
-		   }
+	public ItemChunkColored() {
+		super(new Item.Properties().group(ModItemGroup.instance));
 
-			
-		}	
+		ItemDec.colorItems.add(this);
+
+	}
+
+	public static class ColorHandler implements IItemColor {
+		public int getColor(ItemStack stack, int tintIndex) {
+			int color = Color.WHITE.getRGB();
+
+			if (tintIndex == 1)
+				color = ColorList.getColor(stack);
+
+			return color;
+
+		}
+
+	}
 }

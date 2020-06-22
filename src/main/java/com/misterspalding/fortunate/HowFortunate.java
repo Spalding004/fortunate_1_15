@@ -32,99 +32,93 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("fortunate")
 @Mod.EventBusSubscriber(modid = HowFortunate.MOD_ID, bus = Bus.MOD)
-public class HowFortunate
-{
-    // Directly reference a log4j logger.
-    @SuppressWarnings("unused")
+public class HowFortunate {
+	// Directly reference a log4j logger.
+	@SuppressWarnings("unused")
 	private static final Logger LOGGER = LogManager.getLogger();
-    
-    public static final String MOD_ID = "fortunate";
-    public static HowFortunate instance;
-    final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+	public static final String MOD_ID = "fortunate";
+	public static HowFortunate instance;
+	final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-    public HowFortunate() {
-        
-    	modEventBus.addListener(this::setup);
-    	modEventBus.addListener(this::enqueueIMC);
-    	modEventBus.addListener(this::processIMC);
-    	modEventBus.addListener(this::doClientStuff);
-    	
-    	ItemDec.ITEMS.register(modEventBus);
+	public HowFortunate() {
 
-        instance = this;
-        
-        MinecraftForge.EVENT_BUS.register(this);
-    }
-    
-    
+		modEventBus.addListener(this::setup);
+		modEventBus.addListener(this::enqueueIMC);
+		modEventBus.addListener(this::processIMC);
+		modEventBus.addListener(this::doClientStuff);
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
-        
-    }
+		ItemDec.ITEMS.register(modEventBus);
 
-    private void doClientStuff(final FMLClientSetupEvent event) {
-        int lengthChunk = ItemDec.colorItems.size();
-        for (int x = 0; x < lengthChunk; x++) {
-        	
-        	Minecraft.getInstance().getItemColors().register(new ItemChunkColored.ColorHandler(),  new Item[] {(Item)ItemDec.colorItems.get(x)});
-        	
-        }
-        
-        int lengthIngot = ItemDec.colorIngots.size();
-        for (int x = 0; x < lengthIngot; x++) {
-        	
-        	Minecraft.getInstance().getItemColors().register(new ItemIngotColored.ColorHandler(),  new Item[] {(Item)ItemDec.colorIngots.get(x)});
-        	
-        }
-    }
+		instance = this;
 
-    private void enqueueIMC(final InterModEnqueueEvent event)
-    {
-          }
+		MinecraftForge.EVENT_BUS.register(this);
+	}
 
-    private void processIMC(final InterModProcessEvent event)
-    {
-         }
+	private void setup(final FMLCommonSetupEvent event) {
 
-    @SubscribeEvent
-    public void onServerStarting(FMLServerStartingEvent event) {
-        
-    }
+	}
 
-   
-   
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
-       
-    }
-    
-    @SubscribeEvent
-    public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {
-        
-            event.getRegistry().register(new MetalFortuneModifier.Serializer().setRegistryName(new ResourceLocation(HowFortunate.MOD_ID,"fortunate_metals")));
-            
-    }
-    
- public static class ModItemGroup extends ItemGroup {
-    	
-    	private ModItemGroup(int index, String label) {
-    		
-    		super(index, label);
-    		
-    	}
-    	
-    	@Override
-    	public ItemStack createIcon() {
-    		
-    	return new ItemStack(ItemDec.IRON_CHUNK.get());
-    		
-    	}
-    	
-    	public static final ModItemGroup instance = new ModItemGroup(ItemGroup.GROUPS.length, "mod_creative_tab");
-    	
-    }
-    
-   
+	private void doClientStuff(final FMLClientSetupEvent event) {
+		int lengthChunk = ItemDec.colorItems.size();
+		for (int x = 0; x < lengthChunk; x++) {
+
+			Minecraft.getInstance().getItemColors().register(new ItemChunkColored.ColorHandler(),
+					new Item[] { (Item) ItemDec.colorItems.get(x) });
+
+		}
+
+		int lengthIngot = ItemDec.colorIngots.size();
+		for (int x = 0; x < lengthIngot; x++) {
+
+			Minecraft.getInstance().getItemColors().register(new ItemIngotColored.ColorHandler(),
+					new Item[] { (Item) ItemDec.colorIngots.get(x) });
+
+		}
+	}
+
+	private void enqueueIMC(final InterModEnqueueEvent event) {
+	}
+
+	private void processIMC(final InterModProcessEvent event) {
+	}
+
+	@SubscribeEvent
+	public void onServerStarting(FMLServerStartingEvent event) {
+
+	}
+
+	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+	public static class RegistryEvents {
+
+	}
+
+	@SubscribeEvent
+	public static void registerModifierSerializers(
+			@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {
+
+		event.getRegistry().register(new MetalFortuneModifier.Serializer()
+				.setRegistryName(new ResourceLocation(HowFortunate.MOD_ID, "fortunate_metals")));
+
+	}
+
+	public static class ModItemGroup extends ItemGroup {
+
+		private ModItemGroup(int index, String label) {
+
+			super(index, label);
+
+		}
+
+		@Override
+		public ItemStack createIcon() {
+
+			return new ItemStack(ItemDec.IRON_CHUNK.get());
+
+		}
+
+		public static final ModItemGroup instance = new ModItemGroup(ItemGroup.GROUPS.length, "fortunate.mod_creative_tab");
+
+	}
+
 }

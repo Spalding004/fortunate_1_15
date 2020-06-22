@@ -45,6 +45,12 @@
     "item.fortunate.uranium_chunk": "Uranium Ore Chunk",
     
     "item.fortunate.uranium_ingot": "Uranium Ingot",
+    
+    "item.fortunate.bismuth_chunk": "Bismuth Ore Chunk",
+    
+    "item.fortunate.bismuth_ingot": "Bismuth Ingot",
+    
+     "item.fortunate.bauxite_chunk": "Bauxite Ore Chunk",
   
-    "itemGroup.mod_creative_tab": "How Fortunate!"
+    "itemGroup.fortunate.mod_creative_tab": "How Fortunate!"
 }

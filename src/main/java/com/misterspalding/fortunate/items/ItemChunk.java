@@ -6,20 +6,13 @@ import net.minecraft.item.Item;
 
 public class ItemChunk extends Item {
 
-		
-	
-		public ItemChunk() {
-		      super(new Item.Properties()
-		    		 
-		    		  .group(ModItemGroup.instance)
-		    		  
-		    		  );
-		   
-		      
-			
-			
-		
-		
+	public ItemChunk() {
+		super(new Item.Properties()
+
+				.group(ModItemGroup.instance)
+
+		);
+
 	}
-	
+
 }

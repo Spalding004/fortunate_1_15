@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "fortunate:bismuth_chunk"
+  },
+  "result": "fortunate:bismuth_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}
