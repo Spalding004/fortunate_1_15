@@ -7,6 +7,7 @@ import java.util.Random;
 import javax.annotation.Nonnull;
 
 import com.google.gson.JsonObject;
+import com.misterspalding.fortunate.HowFortunate;
 import com.misterspalding.fortunate.inits.ItemDec;
 
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -19,10 +20,13 @@ import net.minecraft.world.storage.loot.LootParameters;
 import net.minecraft.world.storage.loot.conditions.ILootCondition;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.common.loot.LootModifier;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class MetalFortuneModifier extends LootModifier {
+
 	public MetalFortuneModifier(ILootCondition[] conditionsIn) {
 		super(conditionsIn);
+
 	}
 
 	@Nonnull
@@ -36,7 +40,9 @@ public class MetalFortuneModifier extends LootModifier {
 			return generatedLoot;
 
 		}
+
 		ArrayList<ItemStack> ret = checkloots(generatedLoot, broken);
+
 		if (generatedLoot.get(0).getItem() == ret.get(0).getItem()
 				|| EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, ctxTool) != 0) {
 
@@ -65,118 +71,46 @@ public class MetalFortuneModifier extends LootModifier {
 	 * 
 	 */
 
-	private ArrayList<ItemStack> checkloots(List<ItemStack> generatedLoot, String broken) {
+	private static ArrayList<ItemStack> getReturnStack(String checkedOre, Item toReturn) {
+
 		ArrayList<ItemStack> listReturn = new ArrayList<ItemStack>();
+		toReturn = getChunkItem(checkedOre);
+		listReturn.add(new ItemStack(toReturn));
+		return listReturn;
+
+	}
+
+	private ArrayList<ItemStack> checkloots(List<ItemStack> generatedLoot, String broken) {
+
 		Item toReturn = generatedLoot.get(0).getItem();
 
-		String checkedOre = "copper";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.COPPER_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
+		for (int x = 0; x < ItemDec.metalChunks.size(); x++) {
+			String checkedOre = ItemDec.metalChunks.get(x);
+			if (oreMatch(broken, checkedOre)) {
+				return getReturnStack(checkedOre, toReturn);
+			}
 
-		checkedOre = "iron";
-		if ((broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre))
-				&& !broken.contains("crimson")) {
-			// compatability fix for Silent Gear
-			toReturn = ItemDec.IRON_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "gold";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.GOLD_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "lead";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.LEAD_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "silver";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.SILVER_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "platinum";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.PLATINUM_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "nickel";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.NICKEL_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "tin";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.TIN_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "cobalt";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.COBALT_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "osmium";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.OSMIUM_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "aluminum";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.ALUMINUM_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "zinc";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.ZINC_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "uranium";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.URANIUM_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "bauxite";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.BAUXITE_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
-		}
-
-		checkedOre = "bismuth";
-		if (broken.contains(checkedOre + "_ore") || broken.contains("ore_" + checkedOre)) {
-			toReturn = ItemDec.BISMUTH_CHUNK.get();
-			listReturn.add(new ItemStack(toReturn));
-			return listReturn;
 		}
 
 		return (ArrayList<ItemStack>) generatedLoot;
+
+	}
+
+	public static boolean oreMatch(String broken, String checkedOre) {
+		if ((	   broken.contains(checkedOre + "_ore") 
+				|| broken.contains("ore_" + checkedOre)
+				|| broken.contains(checkedOre + "_oreb")) 
+				&& !broken.contains("crimson")) {
+			return true;
+		}
+
+		return false;
+
+	}
+
+	private static Item getChunkItem(String checkedOre) {
+
+		return ForgeRegistries.ITEMS.getValue(new ResourceLocation(HowFortunate.MOD_ID, checkedOre + "_chunk"));
 
 	}
 
