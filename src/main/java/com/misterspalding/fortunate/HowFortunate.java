@@ -117,7 +117,8 @@ public class HowFortunate {
 
 		}
 
-		public static final ModItemGroup instance = new ModItemGroup(ItemGroup.GROUPS.length, "fortunate.mod_creative_tab");
+		public static final ModItemGroup instance = new ModItemGroup(ItemGroup.GROUPS.length,
+				"fortunate.mod_creative_tab");
 
 	}
 

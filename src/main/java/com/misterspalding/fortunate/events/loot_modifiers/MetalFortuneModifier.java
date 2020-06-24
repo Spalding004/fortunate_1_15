@@ -34,13 +34,14 @@ public class MetalFortuneModifier extends LootModifier {
 	public List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
 		Random random = new Random();
 		String broken = generatedLoot.toString();
+		
 		ItemStack ctxTool = context.get(LootParameters.TOOL);
 		if (generatedLoot.size() == 0) {
 
 			return generatedLoot;
 
 		}
-
+		//System.out.println(broken);
 		ArrayList<ItemStack> ret = checkloots(generatedLoot, broken);
 
 		if (generatedLoot.get(0).getItem() == ret.get(0).getItem()
@@ -81,7 +82,7 @@ public class MetalFortuneModifier extends LootModifier {
 	}
 
 	private ArrayList<ItemStack> checkloots(List<ItemStack> generatedLoot, String broken) {
-
+		
 		Item toReturn = generatedLoot.get(0).getItem();
 
 		for (int x = 0; x < ItemDec.metalChunks.size(); x++) {
@@ -99,8 +100,9 @@ public class MetalFortuneModifier extends LootModifier {
 	public static boolean oreMatch(String broken, String checkedOre) {
 		if ((	   broken.contains(checkedOre + "_ore") 
 				|| broken.contains("ore_" + checkedOre)
-				|| broken.contains(checkedOre + "_oreb")) 
-				&& !broken.contains("crimson")) {
+				|| broken.contains(checkedOre + "_oreb")
+				|| broken.contains("ore_"+checkedOre+"b")
+				) && !broken.contains("crimson")) {
 			return true;
 		}
 
