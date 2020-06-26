@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fortunate:item/chunk_base_stone",
+    "layer1": "fortunate:item/chunk_overlay"
+  }
+}
