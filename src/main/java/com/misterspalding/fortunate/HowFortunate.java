@@ -5,18 +5,12 @@ import javax.annotation.Nonnull;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.misterspalding.fortunate.events.ColorHandlerReg;
 import com.misterspalding.fortunate.events.loot_modifiers.MetalFortuneModifier;
 import com.misterspalding.fortunate.inits.ItemDec;
-import com.misterspalding.fortunate.items.ItemChunkColored;
-import com.misterspalding.fortunate.items.ItemIngotColored;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
@@ -55,29 +49,16 @@ public class HowFortunate {
 		instance = this;
 
 		MinecraftForge.EVENT_BUS.register(this);
+		MinecraftForge.EVENT_BUS.register(new ColorHandlerReg());
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
 
 	}
 	
-	@OnlyIn(Dist.CLIENT)
+	
 	private void doClientStuff(final FMLClientSetupEvent event) {
-		int lengthChunk = ItemDec.colorItems.size();
-		for (int x = 0; x < lengthChunk; x++) {
-
-			Minecraft.getInstance().getItemColors().register(new ItemChunkColored.ColorHandler(),
-					new Item[] { (Item) ItemDec.colorItems.get(x) });
-
-		}
-
-		int lengthIngot = ItemDec.colorIngots.size();
-		for (int x = 0; x < lengthIngot; x++) {
-
-			Minecraft.getInstance().getItemColors().register(new ItemIngotColored.ColorHandler(),
-					new Item[] { (Item) ItemDec.colorIngots.get(x) });
-
-		}
+		
 	}
 
 	private void enqueueIMC(final InterModEnqueueEvent event) {
