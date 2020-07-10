@@ -55,6 +55,10 @@
      "item.fortunate.tungsten_chunk": "Tungsten Ore Chunk",
      
      "item.fortunate.tungsten_ingot": "Tungsten Ingot",
+     
+     "item.fortunate.mythril_chunk" : "Mithril Chunk",
+     
+     "item.fortunate.mythril_ingot" : "Mithril Ingot",
   
     "itemGroup.fortunate.mod_creative_tab": "How Fortunate!"
 }

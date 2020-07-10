@@ -64,4 +64,7 @@ public class ItemDec {
 	
 	public static final RegistryObject<Item> TUNGSTEN_CHUNK = ITEMS.register("tungsten_chunk", () -> new ItemChunkColored("tungsten"));
 	public static final RegistryObject<Item> TUNGSTEN_INGOT = ITEMS.register("tungsten_ingot", () -> new ItemIngotColored());
+	
+	public static final RegistryObject<Item> MYTHRIL_CHUNK = ITEMS.register("mythril_chunk", () -> new ItemChunkColored("mythril"));
+	public static final RegistryObject<Item> MYTHRIL_INGOT = ITEMS.register("mythril_ingot", () -> new ItemIngotColored());
 }

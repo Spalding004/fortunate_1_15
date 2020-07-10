@@ -32,10 +32,11 @@ public class ColorList {
 	public static int bauxiteColor;
 	public static int bismuthColor;
 	public static int tungstenColor;
+	public static int mythrilColor;
 
 	static {
 		cobaltColor = (new Color(78, 109, 212)).getRGB();
-		tinColor = Color.WHITE.getRGB();
+		tinColor = (new Color(227, 238, 255)).getRGB();
 		silverColor = (new Color(199, 215, 221)).getRGB();
 		leadColor = (new Color(152, 185, 222)).getRGB();
 		nickelColor = (new Color(202, 201, 171)).getRGB();
@@ -55,7 +56,9 @@ public class ColorList {
 		zincColor = (new Color(237, 220, 220)).getRGB();
 		bauxiteColor = (new Color(234, 169, 186)).getRGB();
 		bismuthColor = (new Color(230, 217, 229)).getRGB();
-		tungstenColor = (new Color(120, 120, 120)).getRGB();
+		tungstenColor = (new Color(120, 176, 145)).getRGB();
+		mythrilColor = (new Color(58, 133, 214)).getRGB();
+		
 	}
 
 	public static int getColor(ItemStack stack) {
@@ -142,6 +145,12 @@ public class ColorList {
 		if (stack.getItem().getRegistryName().toString().contains("tungsten")) {
 
 			returnColor = ColorList.tungstenColor;
+
+		}
+		
+		if (stack.getItem().getRegistryName().toString().contains("mythril")) {
+
+			returnColor = ColorList.mythrilColor;
 
 		}
 

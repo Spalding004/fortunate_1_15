@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "fortunate:mythril_chunk"
+  },
+  "result": "fortunate:mythril_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}
