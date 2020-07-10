@@ -15,6 +15,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
@@ -58,7 +60,8 @@ public class HowFortunate {
 	private void setup(final FMLCommonSetupEvent event) {
 
 	}
-
+	
+	@OnlyIn(Dist.CLIENT)
 	private void doClientStuff(final FMLClientSetupEvent event) {
 		int lengthChunk = ItemDec.colorItems.size();
 		for (int x = 0; x < lengthChunk; x++) {

@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '2.7-MC-1.15'
+version = '2.7.1-MC-1.15'
 group = 'com.misterspalding.fortunate_1_15' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'fortunate'
 
