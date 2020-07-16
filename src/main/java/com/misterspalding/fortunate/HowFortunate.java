@@ -45,11 +45,11 @@ public class HowFortunate {
 		modEventBus.addListener(this::doClientStuff);
 
 		ItemDec.ITEMS.register(modEventBus);
-
+		
 		instance = this;
 
 		MinecraftForge.EVENT_BUS.register(this);
-		MinecraftForge.EVENT_BUS.register(new ColorHandlerReg());
+		
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
@@ -58,7 +58,7 @@ public class HowFortunate {
 	
 	
 	private void doClientStuff(final FMLClientSetupEvent event) {
-		
+		ColorHandlerReg.registerItemColorHandlers();
 	}
 
 	private void enqueueIMC(final InterModEnqueueEvent event) {
